@@ -215,7 +215,7 @@ exports.forgotPost = function(req, res, next) {
       var mailOptions = {
         to: user.email,
         from: 'support@yourdomain.com',
-        subject: '✔ Reset your password on Mega Boilerplate',
+        subject: '✔ Reset your password on O\'s job board',
         text: 'You are receiving this email because you (or someone else) have requested the reset of the password for your account.\n\n' +
         'Please click on the following link, or paste this into your browser to complete the process:\n\n' +
         'http://' + req.headers.host + '/reset/' + token + '\n\n' +
@@ -269,7 +269,7 @@ exports.resetPost = function(req, res, next) {
       var mailOptions = {
         from: 'support@yourdomain.com',
         to: user.email,
-        subject: 'Your Mega Boilerplate password has been changed',
+        subject: 'Your password has been changed',
         text: 'Hello,\n\n' +
         'This is a confirmation that the password for your account ' + user.email + ' has just been changed.\n'
       };
@@ -368,7 +368,7 @@ exports.authGithub = function(req, res) {
     var accessToken = token.access_token;
     var headers = { 
         Authorization: 'Bearer ' + accessToken,
-        'User-Agent': 'MegaBoilerplate'
+        'User-Agent': 'O\'s Job Board'
       };
     // Step 2. Retrieve user's profile information.
     request.get({ url: userUrl, headers: headers, json: true }, function(err, response, profile) {
