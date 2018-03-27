@@ -3474,6 +3474,8 @@ var Header = function (_get__$Component) {
 
       var _Link_Component4 = _get__('Link');
 
+      var _Link_Component5 = _get__('Link');
+
       return _react2.default.createElement(
         'nav',
         { className: 'navbar navbar-default navbar-static-top' },
@@ -3498,7 +3500,7 @@ var Header = function (_get__$Component) {
             _react2.default.createElement(
               _IndexLink_Component,
               { to: '/', className: 'navbar-brand' },
-              'Project name'
+              'O\'s Job Board'
             )
           ),
           _react2.default.createElement(
@@ -3521,6 +3523,15 @@ var Header = function (_get__$Component) {
                 null,
                 _react2.default.createElement(
                   _Link_Component4,
+                  { to: '/todo', activeStyle: active },
+                  'ToDo'
+                )
+              ),
+              _react2.default.createElement(
+                'li',
+                null,
+                _react2.default.createElement(
+                  _Link_Component5,
                   { to: '/contact', activeStyle: active },
                   'Contact'
                 )

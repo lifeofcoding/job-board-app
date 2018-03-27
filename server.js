@@ -14,6 +14,7 @@ var mongoose = require('mongoose');
 var jwt = require('jsonwebtoken');
 var moment = require('moment');
 var request = require('request');
+const favicon = require('express-favicon');
 
 // Load environment variables from .env file
 dotenv.load();
@@ -51,6 +52,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(favicon(__dirname + '/public/favicon.ico'));
 
 app.use(function(req, res, next) {
   req.isAuthenticated = function() {
